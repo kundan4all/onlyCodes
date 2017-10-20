@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>fillter</title>
+    <script src="libs/angular.min.js"></script>
+    <script src="js/app.js"></script>
+    <script src="js/model.js"></script>
+    <script src="js/controller.js"></script>
+    <style>
+        img{
+            width: 250px;
+            height: 250px;
+        }
+    
+    </style>
+</head>
+<body ng-app="myapp" ng-controller="myctrl">
+   <!--<ul>
+       <li ng-repeat="data in tempdata">
+           
+           {{tempdata.data}}
+       </li>
+   </ul>-->
+   
+       <!-- <input type="text" ng-model="word">
+        <button ng-click="callMe()">serverCall</button>
+        
+       {{word|uppercase}} I.P is {{tempdata.ip}}, Country is   {{tempdata.country_name}}-->
+       
+      
+<!--	<h1>Result ::: {{result}}</h1>-->
+<!--{{word|uppercase}} I.P is {{tempdata.ip}}, Country is {{tempdata.country_name}}-->
+
+   <!-- <input type="text" ng-model="word" placeholder="Type Word Here">
+	<button ng-click="callMe()">Call Server</button>-->
+	Sort By<select ng-model="sort">
+    <option >Choose Sort</option>
+    <option >id</option>
+     <option >name</option>
+     <option >price</option>
+     </select>
+Asc Desc <input type="checkbox" ng-init="order=false" ng-model="order">
+Check Box is {{order}}
+
+	
+	
+	<label for="">search</label>
+	<input type="text" ng-model="search">
+	<ul>
+		<li ng-repeat="mobile in tempdata.mobiles|filter:search|orderBy:sort:order|limitTo:5">
+		<img ng-src="{{mobile.url}}">	{{mobile.name}}  {{mobile.price|currency:'&#8377;'}}
+		</li>
+	</ul>
+   
+       
+  
+</body>
+</html>
