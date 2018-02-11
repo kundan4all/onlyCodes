@@ -1,0 +1,7 @@
+npm init --yes
+npm install express --save
+npm install multer --save
+npm install body-parser --save
+mkdir uploads
+npm install xlsx-to-json-lc --save
+npm install xls-to-json-lc --save
